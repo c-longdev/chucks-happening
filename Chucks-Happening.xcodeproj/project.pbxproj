@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6E483E1D85BD71007338A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A6E483D1D85BD71007338A9 /* GoogleService-Info.plist */; };
 		2A9CA8121D82FDED008CF575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CA8111D82FDED008CF575 /* AppDelegate.swift */; };
 		2A9CA8141D82FDED008CF575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CA8131D82FDED008CF575 /* ViewController.swift */; };
 		2A9CA8171D82FDED008CF575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9CA8151D82FDED008CF575 /* Main.storyboard */; };
 		2A9CA8191D82FDED008CF575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9CA8181D82FDED008CF575 /* Assets.xcassets */; };
 		2A9CA81C1D82FDED008CF575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9CA81A1D82FDED008CF575 /* LaunchScreen.storyboard */; };
+		2ADA678B1D833EE000F4B899 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA678A1D833EE000F4B899 /* Constants.swift */; };
+		2ADA678F1D833F7700F4B899 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA678E1D833F7700F4B899 /* MaterialView.swift */; };
+		2ADA67911D8345F800F4B899 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA67901D8345F800F4B899 /* MaterialTextField.swift */; };
+		3E44671E90ADE57847A85882 /* Pods_Chucks_Happening.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B3F6D46826D05A366F2188 /* Pods_Chucks_Happening.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087781FCAFC77984368D97E0 /* Pods-Chucks-Happening.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chucks-Happening.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chucks-Happening/Pods-Chucks-Happening.debug.xcconfig"; sourceTree = "<group>"; };
+		2A6E483D1D85BD71007338A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A9CA80E1D82FDED008CF575 /* Chucks-Happening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chucks-Happening.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9CA8111D82FDED008CF575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A9CA8131D82FDED008CF575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,11 @@
 		2A9CA8181D82FDED008CF575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9CA81B1D82FDED008CF575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A9CA81D1D82FDED008CF575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADA678A1D833EE000F4B899 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2ADA678E1D833F7700F4B899 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		2ADA67901D8345F800F4B899 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		CDDA80EB4F5B3C10CDDB2A72 /* Pods-Chucks-Happening.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chucks-Happening.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chucks-Happening/Pods-Chucks-Happening.release.xcconfig"; sourceTree = "<group>"; };
+		F3B3F6D46826D05A366F2188 /* Pods_Chucks_Happening.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chucks_Happening.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E44671E90ADE57847A85882 /* Pods_Chucks_Happening.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EC8D5096A4B39575A7B6BE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				087781FCAFC77984368D97E0 /* Pods-Chucks-Happening.debug.xcconfig */,
+				CDDA80EB4F5B3C10CDDB2A72 /* Pods-Chucks-Happening.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2A9CA8051D82FDEC008CF575 = {
 			isa = PBXGroup;
 			children = (
 				2A9CA8101D82FDED008CF575 /* Chucks-Happening */,
 				2A9CA80F1D82FDED008CF575 /* Products */,
+				1EC8D5096A4B39575A7B6BE5 /* Pods */,
+				8A6E42E176CB1F4DA922972E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,50 @@
 		2A9CA8101D82FDED008CF575 /* Chucks-Happening */ = {
 			isa = PBXGroup;
 			children = (
+				2AB466DD1D85C0F20093B273 /* Controller */,
+				2ADA678D1D833F5900F4B899 /* Views */,
+				2ADA67891D833EB500F4B899 /* Util */,
 				2A9CA8111D82FDED008CF575 /* AppDelegate.swift */,
-				2A9CA8131D82FDED008CF575 /* ViewController.swift */,
 				2A9CA8151D82FDED008CF575 /* Main.storyboard */,
 				2A9CA8181D82FDED008CF575 /* Assets.xcassets */,
 				2A9CA81A1D82FDED008CF575 /* LaunchScreen.storyboard */,
 				2A9CA81D1D82FDED008CF575 /* Info.plist */,
+				2A6E483D1D85BD71007338A9 /* GoogleService-Info.plist */,
 			);
 			path = "Chucks-Happening";
+			sourceTree = "<group>";
+		};
+		2AB466DD1D85C0F20093B273 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A9CA8131D82FDED008CF575 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2ADA67891D833EB500F4B899 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2ADA678A1D833EE000F4B899 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		2ADA678D1D833F5900F4B899 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ADA678E1D833F7700F4B899 /* MaterialView.swift */,
+				2ADA67901D8345F800F4B899 /* MaterialTextField.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8A6E42E176CB1F4DA922972E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3B3F6D46826D05A366F2188 /* Pods_Chucks_Happening.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A9CA8201D82FDED008CF575 /* Build configuration list for PBXNativeTarget "Chucks-Happening" */;
 			buildPhases = (
+				664A0B0783112E0CDA4289BC /* [CP] Check Pods Manifest.lock */,
 				2A9CA80A1D82FDEC008CF575 /* Sources */,
 				2A9CA80B1D82FDEC008CF575 /* Frameworks */,
 				2A9CA80C1D82FDEC008CF575 /* Resources */,
+				6B388A327C64AD75E8FD3122 /* [CP] Embed Pods Frameworks */,
+				431DD9A4F8A73764DAC37F75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6E483E1D85BD71007338A9 /* GoogleService-Info.plist in Resources */,
 				2A9CA81C1D82FDED008CF575 /* LaunchScreen.storyboard in Resources */,
 				2A9CA8191D82FDED008CF575 /* Assets.xcassets in Resources */,
 				2A9CA8171D82FDED008CF575 /* Main.storyboard in Resources */,
@@ -132,6 +196,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		431DD9A4F8A73764DAC37F75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chucks-Happening/Pods-Chucks-Happening-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		664A0B0783112E0CDA4289BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B388A327C64AD75E8FD3122 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chucks-Happening/Pods-Chucks-Happening-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A9CA80A1D82FDEC008CF575 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +251,9 @@
 			files = (
 				2A9CA8141D82FDED008CF575 /* ViewController.swift in Sources */,
 				2A9CA8121D82FDED008CF575 /* AppDelegate.swift in Sources */,
+				2ADA67911D8345F800F4B899 /* MaterialTextField.swift in Sources */,
+				2ADA678B1D833EE000F4B899 /* Constants.swift in Sources */,
+				2ADA678F1D833F7700F4B899 /* MaterialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +374,13 @@
 		};
 		2A9CA8211D82FDED008CF575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 087781FCAFC77984368D97E0 /* Pods-Chucks-Happening.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZJCZ93PS5E;
 				INFOPLIST_FILE = "Chucks-Happening/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ctl.Chucks-Happening";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctl.chucks-happening";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +388,13 @@
 		};
 		2A9CA8221D82FDED008CF575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDDA80EB4F5B3C10CDDB2A72 /* Pods-Chucks-Happening.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZJCZ93PS5E;
 				INFOPLIST_FILE = "Chucks-Happening/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ctl.Chucks-Happening";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ctl.chucks-happening";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +419,7 @@
 				2A9CA8221D82FDED008CF575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
