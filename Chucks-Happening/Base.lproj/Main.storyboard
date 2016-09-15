@@ -42,6 +42,9 @@
                                         <frame key="frameInset" minX="11" minY="185" width="276" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Rectangle 2 Copy 2"/>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzi-X1-1bH"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqn-9O-3w9">
                                         <frame key="frameInset" minX="116" minY="196" width="66" height="21"/>
@@ -62,7 +65,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,6 +75,9 @@
                                 <frame key="frameInset" minX="-12" minY="588" width="399" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Facebook Button"/>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qpd-Rs-6AE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rz-Uj-KgQ">
                                 <frame key="frameInset" minX="169" minY="559" width="36" height="21"/>
@@ -92,16 +98,368 @@
                             <constraint firstItem="rsG-AA-nie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="y8P-cX-T0z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="yEo-jy-noU" id="B1I-d3-AbT"/>
+                        <outlet property="passwordField" destination="Ayl-Ib-HRE" id="SPS-Vq-piW"/>
+                        <segue destination="TMQ-ON-KpI" kind="show" identifier="goToFeed" id="K1E-Xy-zkY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136.23188405797103" y="75"/>
+            <point key="canvasLocation" x="-183" y="74"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3re-wU-F8S">
+            <objects>
+                <viewController id="qZ3-Jk-bIr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PBY-Nl-19c"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Jj-i9-NvO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FbC-LY-jyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ant-tg-eIL">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfI-k6-46L">
+                                        <frame key="frameInset" minX="166" minY="18" width="42" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8j-Wm-mpm">
+                                        <frame key="frameInset" minX="16" minY="15" width="49" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Back Arrow"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="nww-Pa-b3W"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eR-ur-21b" customClass="DefaultShadowsWithBorder" customModule="Chucks_Happening" customModuleProvider="target">
+                                <frame key="frameInset" minX="33" minY="82" width="308" height="565"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjo-tR-6hs" customClass="ButtonShadows" customModule="Chucks_Happening" customModuleProvider="target">
+                                        <frame key="frameInset" minX="53" minY="8" width="203" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Camera Button"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3CH-SO-7WF" customClass="MaterialTextField" customModule="Chucks_Happening" customModuleProvider="target">
+                                        <frame key="frameInset" minX="53" minY="182" width="203" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-uU-hsM" customClass="DefaultShadowsWithBorder" customModule="Chucks_Happening" customModuleProvider="target">
+                                        <frame key="frameInset" minX="15" minY="229" width="278" height="269"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Details:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MRG-90-ahU">
+                                                <frame key="frameInset" minX="4" minY="3" width="266" height="260"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-jU-3gZ" customClass="ButtonShadows" customModule="Chucks_Happening" customModuleProvider="target">
+                                        <frame key="frameInset" minX="45" minY="516" width="219" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Read Button Copy 4"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ant-tg-eIL" firstAttribute="top" secondItem="FbC-LY-jyg" secondAttribute="top" id="MUB-ng-wKR"/>
+                            <constraint firstItem="Ant-tg-eIL" firstAttribute="leading" secondItem="FbC-LY-jyg" secondAttribute="leading" id="cAA-1A-ahR"/>
+                            <constraint firstAttribute="trailing" secondItem="Ant-tg-eIL" secondAttribute="trailing" id="qh7-ig-gPb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMo-y3-iAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="-179"/>
+        </scene>
+        <!--goToFeed-->
+        <scene sceneID="Pk0-dJ-xIP">
+            <objects>
+                <viewController title="goToFeed" id="TMQ-ON-KpI" customClass="newsFeedController" customModule="Chucks_Happening" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BBY-IP-l9A"/>
+                        <viewControllerLayoutGuide type="bottom" id="pps-fE-HDH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dsJ-Lm-mWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTF-jr-cF3" customClass="DefaultShadows" customModule="Chucks_Happening" customModuleProvider="target">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rma-8w-Sct">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="9qM-J7-dqF"/>
+                                            <constraint firstAttribute="width" constant="36" id="oCN-X0-y7s"/>
+                                        </constraints>
+                                        <state key="normal" image="Account Button"/>
+                                        <connections>
+                                            <segue destination="mgf-6V-s2Y" kind="show" id="lkZ-ZA-HaV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huv-vI-nd2">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="TBV-NJ-Pe5"/>
+                                            <constraint firstAttribute="width" constant="36" id="aB4-za-o6g"/>
+                                        </constraints>
+                                        <state key="normal" image="Post Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-Vq-rIk">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="QDe-0q-O0l"/>
+                                            <constraint firstAttribute="height" constant="28" id="ia6-Ic-ldU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Rma-8w-Sct" secondAttribute="trailing" constant="25" id="12n-aq-e1B"/>
+                                    <constraint firstItem="Ui7-Vq-rIk" firstAttribute="top" secondItem="tTF-jr-cF3" secondAttribute="top" constant="24" id="1y6-Pt-xWK"/>
+                                    <constraint firstItem="huv-vI-nd2" firstAttribute="leading" secondItem="tTF-jr-cF3" secondAttribute="leading" constant="25" id="2iM-PB-GQd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ui7-Vq-rIk" secondAttribute="bottom" constant="13" id="TuD-AI-Qh4"/>
+                                    <constraint firstAttribute="height" constant="65" id="a7P-Tr-J8K"/>
+                                    <constraint firstItem="Rma-8w-Sct" firstAttribute="leading" secondItem="Ui7-Vq-rIk" secondAttribute="trailing" constant="75" id="avc-ft-oUj"/>
+                                    <constraint firstAttribute="bottom" secondItem="huv-vI-nd2" secondAttribute="bottom" constant="8" id="dNU-mF-vp3"/>
+                                    <constraint firstItem="huv-vI-nd2" firstAttribute="top" secondItem="tTF-jr-cF3" secondAttribute="top" constant="20" id="jJy-Om-AMM"/>
+                                    <constraint firstItem="Ui7-Vq-rIk" firstAttribute="leading" secondItem="huv-vI-nd2" secondAttribute="trailing" constant="75" id="suc-sE-fwF"/>
+                                    <constraint firstItem="Rma-8w-Sct" firstAttribute="top" secondItem="tTF-jr-cF3" secondAttribute="top" constant="20" id="uTd-k6-mXF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="505" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="46P-rZ-2nU">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="505" id="44v-2k-HTr" customClass="PostCell" customModule="Chucks_Happening" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="505"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44v-2k-HTr" id="QU1-8M-nwk">
+                                            <frame key="frameInset" width="375" height="505"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmh-XU-WwK" customClass="DefaultShadowsWithBorder" customModule="Chucks_Happening" customModuleProvider="target">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess What!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMU-pP-Wut">
+                                                            <frame key="frameInset" minX="24" minY="407" width="185" height="28"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                            <color key="textColor" red="0.4549019608" green="0.015686274510000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="154 Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A01-7G-2fc">
+                                                            <frame key="frameInset" minX="45" minY="437" width="63" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="9"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bridge" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-t5-LSz" customClass="ReadButtonRadius" customModule="Chucks_Happening" customModuleProvider="target">
+                                                            <frame key="frameInset" minX="19" minY="92" width="320" height="300"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW9-O2-aSk">
+                                                            <frame key="frameInset" minX="205" minY="369" width="30" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wl-8S-5So" customClass="ButtonShadows" customModule="Chucks_Happening" customModuleProvider="target">
+                                                            <frame key="frameInset" minX="111" minY="55" width="203" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" image="Read Button Copy"/>
+                                                        </button>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-12 at 11.11.31 AM" translatesAutoresizingMaskIntoConstraints="NO" id="oL9-cv-Fjh" customClass="UserProfileRadius" customModule="Chucks_Happening" customModuleProvider="target">
+                                                            <frame key="frameInset" minX="19" minY="9" width="75" height="75"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-R9-4dS">
+                                                            <frame key="frameInset" minX="217" minY="407" width="34" height="47"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" image="Arrow Button Copy 2"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4W-OP-fMx">
+                                                            <frame key="frameInset" minX="280" minY="407" width="34" height="47"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" image="Arrow Button Down"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vz-GE-aK2">
+                                                            <frame key="frameInset" minX="270" minY="454" width="56" height="32"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="0.042730926289598847" blue="0.085387642697146715" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="myUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nb-I9-3O0">
+                                                            <frame key="frameInset" minX="115" minY="19" width="128" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                            <color key="textColor" red="0.45490196078431372" green="0.015686274509803921" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKV-Lk-H5J">
+                                                            <frame key="frameInset" minX="124" minY="449" width="60" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Sign Out"/>
+                                                            <connections>
+                                                                <action selector="signOutButton:" destination="TMQ-ON-KpI" eventType="touchUpInside" id="3D3-pV-7U8"/>
+                                                                <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="n7s-lj-nqh"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="137" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCI-pH-LNr">
+                                                            <frame key="frameInset" minX="61" minY="454" width="346" height="31"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="0.074178605929199004" green="1" blue="0.00019225223670915614" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rmh-XU-WwK" firstAttribute="top" secondItem="QU1-8M-nwk" secondAttribute="top" constant="8" id="AGN-80-ZfK"/>
+                                                <constraint firstItem="Rmh-XU-WwK" firstAttribute="leading" secondItem="QU1-8M-nwk" secondAttribute="leading" constant="8" id="Gn1-4M-lbK"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rmh-XU-WwK" secondAttribute="trailing" constant="8" id="Mju-nP-1uS"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rmh-XU-WwK" secondAttribute="bottom" constant="8" id="yh0-JD-6zh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="kMU-pP-Wut" id="nUM-DR-3d4"/>
+                                            <outlet property="dislikesLabel" destination="1vz-GE-aK2" id="N65-ZN-cuF"/>
+                                            <outlet property="likesLabel" destination="dCI-pH-LNr" id="NFO-FW-Gd6"/>
+                                            <outlet property="postedImg" destination="fc3-t5-LSz" id="s4U-EJ-Sbi"/>
+                                            <outlet property="userImg" destination="oL9-cv-Fjh" id="j7A-6t-6sB"/>
+                                            <outlet property="usernameLabel" destination="7Nb-I9-3O0" id="N5l-Vr-TzB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tTF-jr-cF3" firstAttribute="top" secondItem="dsJ-Lm-mWc" secondAttribute="top" id="09S-RD-D4S"/>
+                            <constraint firstItem="46P-rZ-2nU" firstAttribute="top" secondItem="tTF-jr-cF3" secondAttribute="bottom" constant="19" id="1fG-od-7lQ"/>
+                            <constraint firstItem="pps-fE-HDH" firstAttribute="top" secondItem="46P-rZ-2nU" secondAttribute="bottom" id="4ym-GT-QW4"/>
+                            <constraint firstItem="46P-rZ-2nU" firstAttribute="leading" secondItem="dsJ-Lm-mWc" secondAttribute="leading" id="G8y-7i-ilZ"/>
+                            <constraint firstItem="tTF-jr-cF3" firstAttribute="leading" secondItem="dsJ-Lm-mWc" secondAttribute="leading" id="OAD-d5-4rY"/>
+                            <constraint firstAttribute="trailing" secondItem="tTF-jr-cF3" secondAttribute="trailing" id="SDN-hf-St5"/>
+                            <constraint firstAttribute="trailing" secondItem="46P-rZ-2nU" secondAttribute="trailing" id="ZQe-ij-uAY"/>
+                            <constraint firstItem="46P-rZ-2nU" firstAttribute="top" secondItem="tTF-jr-cF3" secondAttribute="bottom" constant="5" id="ape-ni-gI9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="46P-rZ-2nU" id="kTC-3C-QTY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-i2-eRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549.60000000000002" y="62.518740629685162"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mIq-4A-nT1">
+            <objects>
+                <viewController id="mgf-6V-s2Y" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UTD-M9-pDZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DWo-Mn-yhe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z81-fZ-b1L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxg-Mg-C1Y">
+                                <frame key="frameInset" width="375" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-CC-E4t">
+                                        <frame key="frameInset" minX="155" minY="20" width="65" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1q9-1u-J2L">
+                                        <frame key="frameInset" minX="26" minY="17" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKe-OV-MsV">
+                                        <frame key="frameInset" minX="17" minY="15" width="49" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Back Arrow"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-09-12 at 11.11.31 AM" translatesAutoresizingMaskIntoConstraints="NO" id="fHP-JX-EIJ" customClass="UserProfileRadius" customModule="Chucks_Happening" customModuleProvider="target">
+                                <frame key="frameInset" minX="87" minY="114" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="myUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1o-tc-JZT">
+                                <frame key="frameInset" minX="105" minY="331" width="165" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="27"/>
+                                <color key="textColor" red="0.4549019608" green="0.015686274510000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-hl-za8" customClass="ButtonShadows" customModule="Chucks_Happening" customModuleProvider="target">
+                                <frame key="frameInset" minX="35" minY="393" width="305" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Profile Pic Change"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3l-tI-Cwb">
+                                <frame key="frameInset" minX="35" minY="570" width="305" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Sign Out"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76l-C5-vBe" customClass="ButtonShadows" customModule="Chucks_Happening" customModuleProvider="target">
+                                <frame key="frameInset" minX="35" minY="485" width="305" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Change Username"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssp-mP-kLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335" y="473"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Account Button" width="46" height="46"/>
+        <image name="Arrow Button Copy 2" width="56" height="78"/>
+        <image name="Arrow Button Down" width="35" height="49"/>
+        <image name="Back Arrow" width="49" height="35"/>
+        <image name="Camera Button" width="278" height="227"/>
+        <image name="Change Username" width="305" height="77"/>
         <image name="Facebook Button" width="239" height="43"/>
         <image name="Group" width="268" height="156"/>
+        <image name="Post Button" width="46" height="46"/>
+        <image name="Profile Pic Change" width="305" height="77"/>
+        <image name="Read Button Copy" width="203" height="29"/>
+        <image name="Read Button Copy 4" width="219" height="41"/>
         <image name="Rectangle 2 Copy 2" width="239" height="43"/>
         <image name="Screen Shot 2016-09-09 at 10.29.19 AM" width="747" height="1298"/>
+        <image name="Screen Shot 2016-09-12 at 11.11.31 AM" width="75" height="75"/>
+        <image name="Sign Out" width="305" height="77"/>
+        <image name="bridge" width="320" height="300"/>
     </resources>
 </document>

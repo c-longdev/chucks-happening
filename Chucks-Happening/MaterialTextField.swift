@@ -12,7 +12,7 @@ class MaterialTextField: UITextField {
 
     override func awakeFromNib() {
         layer.cornerRadius = 2.0
-        layer.borderColor = UIColor(red: SHADOW_COLOR, green: SHADOW_COLOR, blue: SHADOW_COLOR, alpha: 0.1).cgColor
+        layer.borderColor = UIColor(red: SHADOW_GREY, green: SHADOW_GREY, blue: SHADOW_GREY, alpha: 0.1).cgColor
         layer.borderWidth = 1.0
         layer.backgroundColor = UIColor.lightGray.cgColor
     }
